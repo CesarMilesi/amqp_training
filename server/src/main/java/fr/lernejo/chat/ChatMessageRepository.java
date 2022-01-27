@@ -8,10 +8,10 @@ import java.util.List;
 @Repository
 public class ChatMessageRepository {
 
-    public ArrayList<String> Messages;
+    public ArrayList<String> Messages = new ArrayList<>(10);
 
-    public ChatMessageRepository() {
-        this.Messages = new ArrayList<String>(10);
+    public ChatMessageRepository(ArrayList<String> messages) {
+        Messages = messages;
     }
 
     public void addChatMessage(String message) {
