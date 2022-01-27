@@ -16,6 +16,6 @@ public class ChatMessageController {
 
     @GetMapping("/api/message")
     public Iterable<String> ReturnTenMessages() {
-        return this.chatMessageRepository.getLastTenMessage();
+        return chatMessageRepository.getLastTenMessage();
     }
 }
