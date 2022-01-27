@@ -15,7 +15,7 @@ public class Launcher {
         Scanner toScan = new Scanner(System.in);
         String lineToWrite = toScan.nextLine();
         while (!lineToWrite.equals("q")) {
-            rabbitTemplate.convertAndSend("","chat_keyMessage", lineToWrite);
+            rabbitTemplate.convertAndSend("","chat_messages", lineToWrite);
             System.out.println("Message sent. Input a message, we will send it for you (q for quit)");
             lineToWrite = toScan.nextLine();
         }
